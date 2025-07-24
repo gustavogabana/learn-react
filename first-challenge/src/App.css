@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, sans-serif;
+}
+
+header {
+    height: 90px;
+    background-color: #21222A;
+    padding: 30px 25px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    height: 100%;
+}
+
+nav > img {
+    width: 40px;
+}
+
+nav > span {
+    color: #61DAFB;
+    font-size: 1.4rem;
+}
