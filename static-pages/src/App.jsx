@@ -2,8 +2,15 @@ import './App.css'
 
 function Header() {
   return (
-    <header>
-      <img src="./assets/reac-logo.png" alt="React logo" width="40px" />
+    <header className='header'>
+      <img src="./assets/reac-logo.png" alt="React logo" className='nav-logo' />
+      <nav>
+        <ul className='nav-list'>
+          <li>Pricing</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
     </header>
   )
 }
