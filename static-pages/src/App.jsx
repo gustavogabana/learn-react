@@ -1,39 +1,7 @@
 import './App.css'
-
-function Header() {
-  return (
-    <header className='header'>
-      <img src="./assets/reac-logo.png" alt="React logo" className='nav-logo' />
-      <nav>
-        <ul className='nav-list'>
-          <li>Pricing</li>
-          <li>About</li>
-          <li>Contact</li>
-        </ul>
-      </nav>
-    </header>
-  )
-}
-
-function MainContent() {
-  return (
-    <main>
-      <h1>Reasons why I'm excited to learn React</h1>
-      <ol>
-        <li>React is a popular library, so I will be able to fit in with all the coolest devs out there!</li>
-        <li>I am more likely to get a job as a front end developer if I know React.</li>
-      </ol>
-    </main>
-  )
-}
-
-function Footer() {
-  return (
-    <footer>
-      <small>© 2025 Maximize development. All rights reserved.</small>
-    </footer>
-  )
-}
+import Header from './components/Header'
+import MainContent from './components/MainContent'
+import Footer from './components/Footer'
 
 function Page() {
     return (
