@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+}
+
+header {
+  background: #F55A5A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 55px;
+  color: white;
+}
+
+header > h1 {
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: Inter, sans-serif;
+}
