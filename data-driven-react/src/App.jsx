@@ -7,7 +7,7 @@ function App() {
   const entryElements = data.map((entry) => {
     return (
       <Entry
-        id={entry.id}
+        key={entry.id}
         img={entry.img}
         title={entry.title}
         country={entry.country}
