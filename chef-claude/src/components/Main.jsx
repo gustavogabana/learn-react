@@ -1,6 +1,7 @@
 import { useState } from "react"
 import IngredientsList from "./IngredientsList"
 import ClaudeRecipe from "./ClaudeRecipe"
+import { getRecipeFromMistral } from "../ai"
 
 export default function Main() {
     const [ingredients, setIngredients] = useState(["all the main spices", "pasta", "ground beef", "tomato paste"])
@@ -11,7 +12,9 @@ export default function Main() {
         setIngredients((prev) => [...prev, newIngredient])
     }
 
-    function handleShowRecipe() {
+    async function handleGetRecipe() {
+        const response = await getRecipeFromMistral(ingredients)
+        console.log("response: ", response)
         setRecipeShown(!recipeShown)
     }
 
@@ -29,7 +32,7 @@ export default function Main() {
             {ingredients.length > 0 &&
                 <IngredientsList
                     ingredients={ingredients}
-                    handleShowRecipe={handleShowRecipe}
+                    handleGetRecipe={handleGetRecipe}
                 />
             }
             {recipeShown && 
