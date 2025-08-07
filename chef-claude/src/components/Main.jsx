@@ -5,7 +5,7 @@ import { getRecipeFromMistral } from "../ai"
 
 export default function Main() {
     const [ingredients, setIngredients] = useState(["all the main spices", "pasta", "ground beef", "tomato paste"])
-    const [recipeShown, setRecipeShown] = useState(false)
+    const [recipe, setRecipe] = useState("")
 
     function handleSubmit(formData) {
         const newIngredient = formData.get("ingredient")
@@ -14,8 +14,7 @@ export default function Main() {
 
     async function handleGetRecipe() {
         const response = await getRecipeFromMistral(ingredients)
-        console.log("response: ", response)
-        setRecipeShown(!recipeShown)
+        setRecipe(response)
     }
 
     return (
@@ -35,8 +34,8 @@ export default function Main() {
                     handleGetRecipe={handleGetRecipe}
                 />
             }
-            {recipeShown && 
-                <ClaudeRecipe />
+            {recipe && 
+                <ClaudeRecipe recipe={recipe} />
             }
         </main>
     )
